@@ -14,8 +14,10 @@ mysqli_set_charset($conn,"utf8");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-
+$brugerid = "";
+$kode = "";
+$kkode = "";
+$kid = "";
 
 // hvis navn og pw er udfyldt, check deres værdi
 if(!empty( $_POST['brugerid'] ) && !empty( $_POST['kode'] )) {
