@@ -1,0 +1,172 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+body, html{
+  background-color: #F4F0EA;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  float: left;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  margin-left: 35px;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: bold;
+  transition-duration: 0s;
+}
+
+button:hover{
+  text-decoration: underline;
+}
+
+.header{
+  background-color: #ADD3CE;
+  height: 202px;
+}
+
+.fersken{
+  display: inline-block;
+  background-color: transparent;
+  margin-left: 169.6px;
+}
+
+.browse{
+  background-color: transparent;
+  margin-right: 169.6px;
+  padding-top: 40px;
+  float: right;
+}
+
+.gaestebogTitle{
+  text-align: center;
+  font-family: "Merriweather", "Open Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+  font-style: normal;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+}
+
+.gaestebog{
+  margin-left: 169.6px;
+  margin-right: 169.6px;
+  margin-top: 65px;
+}
+
+.gaestebog div{
+  width: 49.5%;
+  display: inline-block;
+  min-height: 600px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.gaesteSkriv{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.gaesteSkriv th{
+  text-align: left;
+  vertical-align: top;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom:  1px solid #ddd;
+  min-width: 100px;
+}
+
+.gaesteSkriv td{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom:  1px solid #ddd;
+  min-width: 484.1px;
+}
+
+.gaesteSkriv input{
+  width: 99%;
+}
+
+.gaesteSkriv textarea{
+  width: 99%;
+  max-width: 480px;
+  min-width: 480px;
+}
+
+.gaesteSe{
+  border-collapse: collapse;
+  width: 100%;
+  vertical-align: top;
+  overflow: auto;
+  max-height: 600px;
+}
+
+.gaesteSe td{
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.gaesteSe th{
+  border-bottom: 1px solid #ddd;
+}
+
+.footer{
+  background-color: #7A7876;
+  height: 248px;
+}
+
+.footerTable{
+  color: #FFFFFF;
+  margin-left: 169.6px;
+  text-align: left;
+  padding-top: 40px;
+}
+
+.footerTable th{
+  font-style: normal;
+  font-size: 30px;
+  font-weight: normal;
+  text-decoration: none;
+  letter-spacing: normal;
+}
+
+.footerTable td{
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+  font-style: normal;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 2.1;
+}
+
+.fadeLink {
+  transition-duration: 0s;
+}
+
+.fadeLink:hover {
+  color: rgba(192,192,192,1);
+}
+
+.redLink {
+  transition-duration: 0s;
+  color: #ed7c59;
+}
+
+.redLink:hover {
+  text-decoration: underline;
+}
