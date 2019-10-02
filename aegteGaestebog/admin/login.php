@@ -8,33 +8,36 @@ $username = "root";
 $password = "";
 $dbname = "guestbook";
 
-// åbn forbindelsen
+// ï¿½bn forbindelsen
 $conn = new mysqli($servername, $username, $password, $dbname);
 mysqli_set_charset($conn,"utf8");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$brugerid = "";
+$kode = "";
+$kid = "";
+$kkode = "";
 
 
-
-// hvis navn og pw er udfyldt, check deres værdi
+// hvis navn og pw er udfyldt, check deres vï¿½rdi
 if(!empty( $_POST['brugerid'] ) && !empty( $_POST['kode'] )) {
-  // her vil man altid checke ved at slå op i database
-  // og det gør vi også i næste eksempel
+  // her vil man altid checke ved at slï¿½ op i database
+  // og det gï¿½r vi ogsï¿½ i nï¿½ste eksempel
     $brugerid = $_POST['brugerid'];
   $kode = $_POST['kode'];
-  
+
   $sql = "SELECT kode FROM users WHERE brugerid='$brugerid';";
 $result = $conn->query($sql);
 	   $fetch = $result;
 	   $row = mysqli_fetch_assoc($fetch);
 	   $kkode = $row['kode'];
-	   
+
 	   $kid = $brugerid;
 }
   // er brugernavn og password udfyldt korrekt?
   if($brugerid == $kid && password_verify($kode, $kkode) == true) {
-    // husk brugernavn på sessionen
+    // husk brugernavn pï¿½ sessionen
     $_SESSION['brugerid'] = $brugerid;
     // viderestil til forside
     header('location:index.php');
@@ -50,17 +53,17 @@ $result = $conn->query($sql);
       input[type=text], textarea {
         width: 100%;
       }
-	  
+
     </style>
   </head>
   <body>
-  
- 
+
+
 
 
 
   <form method="POST">
-    <table width="100%"> 
+    <table width="100%">
       <tr>
         <th>Brugernavn: <br/></th>
         <th><input type="text" name="brugerid" /></th>
