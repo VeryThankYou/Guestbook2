@@ -14,11 +14,10 @@ mysqli_set_charset($conn,"utf8");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$brugerid = "";
-$kode = "";
-$kid = "";
-$kkode = "";
-
+$brugerid="";
+$kode="";
+$kkode="";
+$kid="";
 
 // hvis navn og pw er udfyldt, check deres v�rdi
 if(!empty( $_POST['brugerid'] ) && !empty( $_POST['kode'] )) {
@@ -45,25 +44,31 @@ $result = $conn->query($sql);
 
 ?>
 <html>
-  <head>
-  <meta charset="utf-8">
-    <style>
-      table {border-collapse: collapse; }
-      table, td {border: 1px solid black; }
-      input[type=text], textarea {
-        width: 100%;
-      }
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/mainStyles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="fersken">
+      <img src="../FanefjordFrugt_Logo_Fersken.png" alt="Fanefjord Frugt Logo">
+    </div>
+    <div class="browse">
+      <ul>
+        <li><button type="button" onclick="Test.php">Hjem</button></li>
+        <li><button type="button" onclick="Test.php">Om os</button></li>
+        <li><button type="button" onclick="Test.php">Galleri</button></li>
+        <li><button type="button" onclick="Test.php">Vores produkter</button></li>
+        <li><button type="button" onclick="Test.php">Gæstebog</button></li>
+        <li><button type="button" onclick="Test.php">Kontakt</button></li>
+      </ul>
+    </div>
+  </div>
 
-    </style>
-  </head>
-  <body>
 
 
-
-
-
-  <form method="POST">
-    <table width="100%">
+  <form method="POST" style="min-height:275px;padding-left:600px;padding-top:75px;">
+    <table>
       <tr>
         <th>Brugernavn: <br/></th>
         <th><input type="text" name="brugerid" /></th>
@@ -77,5 +82,38 @@ $result = $conn->query($sql);
       </tr>
     </table>
   </form>
+
+  <div class="footer">
+    <table class="footerTable">
+      <col width="340px">
+      <col width="420px">
+      <col width="420px">
+      <tr>
+        <th>Find os</th>
+        <th>Åbningstider</th>
+        <th>Genveje</th>
+      </tr>
+
+      <tr>
+        <td>Hårbøllevej 22</td>
+        <td>Salgsbod: Åben i sæsonen ca. 15. aug. - 1. feb.</td>
+        <td><a class="fadeLink" href="Test.php">Hjem</a>  | Om os</td>
+      </tr>
+
+      <tr>
+        <td>Email: <a class="redLink" href="mailto:info@fanefjordfrugt.dk">info@fanefjordfrugt.dk</a></td>
+        <td>Alle dage: Kl. 8-18</td>
+        <td><a class="fadeLink" href="Test.php">Galleri</a>  | Sortiment</td>
+      </tr>
+
+      <tr>
+        <td>Telefon: <span style="color: #ed7c59;">22 32 56 30</span></td>
+        <td>Udenfor sæsonen: Kontakt os for aftale</td>
+        <td><a class="redLink" href="Test.php">Kontakt os</a></td>
+      </tr>
+    </table>
+
+
+  </div>
   </body>
 </html>
