@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mainStyles.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="fersken">
+      <img src="FanefjordFrugt_Logo_Fersken.png" alt="Fanefjord Frugt Logo">
+    </div>
+
+    <div class="browse">
+      <ul>
+        <li><button type="button" onclick="Test.php">Hjem</button></li>
+        <li><button type="button" onclick="Test.php">Om os</button></li>
+        <li><button type="button" onclick="Test.php">Galleri</button></li>
+        <li><button type="button" onclick="Test.php">Vores produkter</button></li>
+        <li><button type="button" onclick="Test.php">Gæstebog</button></li>
+        <li><button type="button" onclick="Test.php">Kontakt</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="gaestebogTitle">Gæstebog</p>
+  <div class="gaestebog">
+    <div>
+      <form method="POST">
+        <table class="gaesteSkriv">
+          <tr>
+            <th>Overskrift:</th>
+            <td><input type="text" name="overskrift"/> </td>
+          </tr>
+          <tr>
+            <th>Tekst:</th>
+            <td><textarea name="tekst" rows="10" cols="40"></textarea> </td>
+          </tr>
+          <tr>
+            <th>Dit navn:</th>
+            <td><input type="text" name="afsender"/> </td>
+          </tr>
+          <tr>
+            <th colspan="2"><span class="fejl"></span> </th>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="gem" /> </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div>
+      <table class="gaesteSe">
+        <tr>
+          <th>Dato</th>
+          <th>Titel</th>
+          <th>Kommentar</th>
+          <th>Navn</th>
+        </tr>
+
+        <tr>
+          <td>2019-10-03 14:08:34</td>
+          <td>Lorem ipsum</td>
+          <td>Consectetur adipiscing elit. Vestibulum malesuada sagittis tortor rutrum congue. Ut non risus id velit mattis pharetra posuere eu ipsum. Vestibulum imperdiet neque ac dapibus feugiat. Sed sit amet ullamcorper nisi, et ornare nisl. Proin vestibulum aliquam euismod. Maecenas eleifend massa elit, eu sollicitudin neque lobortis sit amet. Nullam mauris magna, fermentum a sapien eu, rhoncus vehicula dui.</td>
+          <td>Dolor sit amet</td>
+        </tr>
+
+        <tr>
+          <td>2019-10-03 14:14:54</td>
+          <td>Maecenas accumsan lacinia nulla et ultricies</td>
+          <td>Nunc sapien ex, pretium id sapien nec, eleifend venenatis leo. Suspendisse auctor enim at tincidunt imperdiet. Fusce purus purus, rhoncus nec lacus at, viverra viverra orci. Sed et mauris magna. Donec aliquet augue sed scelerisque fringilla. Sed suscipit sagittis est. Quisque tortor risus, elementum a sodales vel, finibus nec lacus. Nam auctor ornare justo. Nullam a consequat urna, eu posuere ex.</td>
+          <td>Cras a ligula dolor</td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <table class="footerTable">
+      <col width="340px">
+      <col width="420px">
+      <col width="420px">
+      <tr>
+        <th>Find os</th>
+        <th>Åbningstider</th>
+        <th>Genveje</th>
+      </tr>
+
+      <tr>
+        <td>Hårbøllevej 22</td>
+        <td>Salgsbod: Åben i sæsonen ca. 15. aug. - 1. feb.</td>
+        <td><a class="fadeLink" href="Test.php">Hjem</a>  | Om os</td>
+      </tr>
+
+      <tr>
+        <td>Email: <a class="redLink" href="mailto:info@fanefjordfrugt.dk">info@fanefjordfrugt.dk</a></td>
+        <td>Alle dage: Kl. 8-18</td>
+        <td><a class="fadeLink" href="Test.php">Galleri</a>  | Sortiment</td>
+      </tr>
+
+      <tr>
+        <td>Telefon: <span style="color: #ed7c59;">22 32 56 30</span></td>
+        <td>Udenfor sæsonen: Kontakt os for aftale</td>
+        <td><a class="redLink" href="Test.php">Kontakt os</a></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
