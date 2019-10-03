@@ -150,7 +150,7 @@
 
         <?php
         } else {
-          echo "ingen indlæg, du kan skrive det første";
+          echo "Ingen beskeder, scenen er din!";
         }
         $conn->close();
         ?>

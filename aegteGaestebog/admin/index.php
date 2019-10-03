@@ -108,14 +108,14 @@ if(empty( $_SESSION['brugerid'] )) {
 $sql = "SELECT * FROM message;";
 $result = $conn->query($sql);
 ?>
-  
+
   <p class="gaestebogTitle">Gæstebog</p>
   <div style="text-align:center;">
   <form method="POST">
   <input type="submit" name="logout" value="Log ud"/>
   </form>
   </div>
-  
+
   <div class="gaestebog">
     <div>
       <form method="POST">
@@ -215,7 +215,7 @@ if ($result->num_rows > 0) {
     <?php
 
 } else {
-    echo "ingen indl�g, du kan skrive det f�rste";
+    echo "Ingen beskeder, scenen er din!";
 }
 
 
