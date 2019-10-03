@@ -2,35 +2,6 @@
 // For at have adgang til sessions-variablen
 session_start();
 
-// hvis ikke bruger er logget ind viderestilles til logind-siden
-if(empty( $_SESSION['brugerid'] )) {
-  header('location:login.php');
-}
-?>
-
-
-<html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/mainStyles.css">
-</head>
-<body>
-  <div class="header">
-    <div class="fersken">
-      <img src="../FanefjordFrugt_Logo_Fersken.png" alt="Fanefjord Frugt Logo">
-    </div>
-    <div class="browse">
-      <ul>
-        <li><button type="button" onclick="Test.php">Hjem</button></li>
-        <li><button type="button" onclick="Test.php">Om os</button></li>
-        <li><button type="button" onclick="Test.php">Galleri</button></li>
-        <li><button type="button" onclick="Test.php">Vores produkter</button></li>
-        <li><button type="button" onclick="Test.php">Gæstebog</button></li>
-        <li><button type="button" onclick="Test.php">Kontakt</button></li>
-      </ul>
-    </div>
-  </div>
- <?php
 
  // data for forbindelse til databasen
 $servername = "localhost";
@@ -99,14 +70,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->query($gemsql);
     #echo $gemsql;
   }
+	} else if(isset($_POST["logout"])) {
+	session_unset();
 	}
 	}
 
+
+// hvis ikke bruger er logget ind viderestilles til logind-siden
+if(empty( $_SESSION['brugerid'] )) {
+  header('location:login.php');
+}
+?>
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/mainStyles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="fersken">
+      <img src="../FanefjordFrugt_Logo_Fersken.png" alt="Fanefjord Frugt Logo">
+    </div>
+    <div class="browse">
+      <ul>
+        <li><button type="button" onclick="Test.php">Hjem</button></li>
+        <li><button type="button" onclick="Test.php">Om os</button></li>
+        <li><button type="button" onclick="Test.php">Galleri</button></li>
+        <li><button type="button" onclick="Test.php">Vores produkter</button></li>
+        <li><button type="button" onclick="Test.php">Gæstebog</button></li>
+        <li><button type="button" onclick="Test.php">Kontakt</button></li>
+      </ul>
+    </div>
+  </div>
+ <?php
 $sql = "SELECT * FROM message;";
 $result = $conn->query($sql);
 ?>
-
+  
   <p class="gaestebogTitle">Gæstebog</p>
+  <div style="text-align:center;">
+  <form method="POST">
+  <input type="submit" name="logout" value="Log ud"/>
+  </form>
+  </div>
+  
   <div class="gaestebog">
     <div>
       <form method="POST">
@@ -127,7 +136,7 @@ $result = $conn->query($sql);
             <th colspan="2"><span class="fejl"> <?php echo $fejl_mangel; ?> </span></th>
           </tr>
           <tr>
-	           <td colspan="2"><input type="submit" name="send" value="gem" /> </td>
+	           <td colspan="2"><input type="submit" name="send" value="Gem" /> </td>
            </tr>
          </table>
        </form>
