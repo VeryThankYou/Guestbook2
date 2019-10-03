@@ -107,7 +107,7 @@
             <th colspan="2"><span class="fejl"><?php echo $fejl_mangel; ?></span> </th>
           </tr>
           <tr>
-            <td colspan="2"><input type="submit" value="gem" /> </td>
+            <td colspan="2"><input type="submit" value="Gem" /> </td>
           </tr>
         </table>
       </form>
